@@ -31,7 +31,7 @@ namespace decode_time
             var m = r.Match(s);
             if (!m.Success)
                 return s;
-            return FromUnixTime(long.Parse(m.Groups[1].ToString())).GetDateTimeFormats()[39];
+            return FromUnixTime(long.Parse(m.Groups[1].ToString())).ToString("dddd, d MMMM yyyy HH:mm:ss");
         }
 
         static void Main(string[] args)
